@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Color Generator</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Dull Birthday Color Generator</h1>
+    <section>
+        <form action="/data" method="post">
+            <input id="month" type="text" placeholder="Month" name="month">
+            <input id="day" type="text" placeholder="Day" name="day">
+            <input id="year" type="text" placeholder="Year" name="year">
+            <button type="submit">Get Color!</button>
+        </form>
+    </section>
+    <section id="color">
+    </section>
+    <ul class="datas">
+        <% for(var i=0; i<data.length; i++) {%>
+          <li class="data">
+            <span><%= data[i].monthMonth %></span>
+            <span><%= data[i].dayDay %></span>
+            <span><%= data[i].yearYear %></span>
+            <span><%= data[i].hexCode %></span>
+            <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+          </li>
+        <%} %>
+    </ul>
+<script src="js/main.js"></script>
+</body>
+</html>
